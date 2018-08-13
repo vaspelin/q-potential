@@ -90,14 +90,14 @@ LocalEnergyMinimizer.minimize(sim.context,tolerance=1*kilojoule/mole,maxIteratio
 
 sim.context.setVelocitiesToTemperature(298.15*kelvin)
 
-sim.reporters.append(DCDReporter('out.dcd', 1000))
+sim.reporters.append(DCDReporter('out.dcd', 1))
 
-sim.reporters.append(StateDataReporter(open('out_file', 'w'), 1000, step=True,
+sim.reporters.append(StateDataReporter(open('out_file', 'w'), 1, step=True,
       potentialEnergy=True, totalEnergy=True, temperature=True, density=True,
-          progress=True, remainingTime=True, speed=True, separator='	', totalSteps = 20000000))
+          progress=True, remainingTime=True, speed=True, separator='	', totalSteps = 20))
 
 print('Running Production...')
-sim.step(20000000)
+sim.step(20)
 with open('out.chk', 'wb') as f:
       f.write(sim.context.createCheckpoint())
 print('Saving pdb file')

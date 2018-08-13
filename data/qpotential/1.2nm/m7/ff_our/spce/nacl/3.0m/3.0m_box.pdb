@@ -1,4 +1,4 @@
-REMARK   1 CREATED WITH OPENMM 7.1, 2018-06-24
+REMARK   1 CREATED WITH OPENMM 7.1.1, 2018-08-13
 HETATM    1 Cl    IN A   1      40.161  22.928  30.267  1.00  0.00          Cl  
 TER       2       IN A   1
 HETATM    3 Cl    IN B   1      57.655  38.921  17.092  1.00  0.00          Cl  
