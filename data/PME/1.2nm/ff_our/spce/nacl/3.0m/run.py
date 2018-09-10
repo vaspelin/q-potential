@@ -18,8 +18,8 @@ modeller.addSolvent(ff,model='spce',boxSize=(60.000000,60.000000,60.000000)*angs
 print('Creating OpenMM System')
 
 system = ff.createSystem(
-    modeller.topology, nonbondedMethod=CutoffPeriodic,
-    nonbondedCutoff=1.200000*nanometers, constraints=AllBonds, rigidWater=True)
+    modeller.topology, nonbondedMethod=PME,
+    nonbondedCutoff=1.200000*nanometers, constraints=AllBonds, rigidWater=True, ewaldErrorTolerance=0.0005)
 
 # Create the integrator to do Langevin dynamics
 integrator = LangevinIntegrator(
